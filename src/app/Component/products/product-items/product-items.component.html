@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    @for (item of products; track $index) {
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="{{item.img}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p>Quantity: {{item.quantity}}</p>
+            @switch (item.quantity) {
+              @case (0) {
+                <button disabled class="buy btn btn-danger">Out of stock</button>
+              }
+              @case (1) {
+                <button disabled class="buy btn btn-secondary">1 Left</button>
+              }
+              @default {
+                <button class="buy btn btn-warning">Add to Cart</button>
+              }
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

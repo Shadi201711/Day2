@@ -1,0 +1,45 @@
+<form class="form" (submit)="addStudent($event)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Enter Name"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input
+      type="number"
+      class="form-control"
+      id="age"
+      name="age"
+      placeholder="Enter Age"
+      required
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">age</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <th scope="row">{{ student.id }}</th>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td><button (click)="deleteStudent()">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+

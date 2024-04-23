@@ -1,7 +1,17 @@
-<app-navbar></app-navbar>
-<app-slider></app-slider>
-<app-products></app-products>
+<app-navbar (EventData)="getData($event)"
+></app-navbar>
+ @switch (s) { @case('Product'){
+  <app-products></app-products>
+      } @case('Track'){
+        <app-track-details></app-track-details>
+      } @case('Student'){
+        <app-form></app-form>
+      } @default{
+        <app-slider></app-slider>
+      } }
+<!-- <app-slider></app-slider> -->
+<!-- <app-products></app-products>
 <app-form></app-form>
-<app-track-details></app-track-details>
+<app-track-details></app-track-details> -->
 <app-footer></app-footer>
 

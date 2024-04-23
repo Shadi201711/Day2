@@ -1,2 +1,15 @@
-<app-product-items></app-product-items>
+<!-- <app-product-items></app-product-items>
+-->
 
+
+<div>
+  <div class="container">
+    <div class="row ">
+      <app-product-items
+        *ngFor="let product of products"
+        class="col-sm-3 m-5 "
+        [myProduct]="product"
+      ></app-product-items>
+    </div>
+  </div>
+</div>

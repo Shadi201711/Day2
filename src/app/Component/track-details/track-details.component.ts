@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -41,4 +41,9 @@ export class TrackDetailsComponent {
               if(!track) return;
               this.LocationValue = [...track.location];
         }
+
+        // @Output() TrackEvent = new EventEmitter();
+        // SendData(){
+        //   this.TrackEvent.emit(this.TrackEvent);
+        // }
 }

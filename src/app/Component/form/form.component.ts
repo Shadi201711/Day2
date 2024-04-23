@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -56,4 +56,9 @@ export class FormComponent {
   deleteStudent(){
     this.students.pop();
   }
+
+//   @Output() FormEvent = new EventEmitter();
+// SendData(){
+//   this.FormEvent.emit(this.FormEvent);
+// }
 }

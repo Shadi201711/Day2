@@ -16,4 +16,8 @@ import { TrackDetailsComponent } from './Component/track-details/track-details.c
 })
 export class AppComponent {
   title = 'Day1';
+  s : string = '';
+  getData(x: any) {
+    this.s = x;
+}
 }
